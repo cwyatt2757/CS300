@@ -1,4 +1,5 @@
-1. Problem Statement
+**1. Problem Statement**
+
 The goal of this project was to develop an efficient course management system for ABC University, enabling academic advisors to load, search, and display course information—including prerequisites—in a structured manner. The primary challenge was selecting an optimal data structure to support:
 
 Fast insertion and retrieval of course data.
@@ -10,7 +11,8 @@ Scalability to accommodate future expansions (e.g., additional course details or
 The solution needed to balance performance, ease of use, and maintainability while adhering to best practices in software design.
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------
-2. Approach and Data Structure Justification
+**2. Approach and Data Structure Justification**
+
 To address the problem, I evaluated three data structures:
 
 Vector: Simple but inefficient for searching (O(n)) and requires explicit sorting (O(n log n)).
@@ -30,7 +32,8 @@ Adaptability: The tree structure simplifies future modifications (e.g., adding m
 This decision underscored the importance of selecting data structures based on operational priorities—a foundational concept in software engineering.
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------
-3. Overcoming Roadblocks
+**3. Overcoming Roadblocks**
+
 Challenge 1: Validating Prerequisites
 
 Problem: Prerequisites needed verification against a master course list to avoid invalid entries.
@@ -50,7 +53,8 @@ Mitigation: For this project’s scale (~hundreds of courses), the risk was mini
 Debugging involved iterative testing with sample files and validation checks (e.g., verifying output order and prerequisite counts).
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------
-4. Impact on Software Design Approach
+**4. Impact on Software Design Approach**
+
 This project refined my design philosophy in three key ways:
 
 Trade-off Analysis: Prioritizing BST’s sorting efficiency over a hash table’s faster lookups demonstrated the need to align data structures with user workflows.
@@ -62,7 +66,8 @@ User-Centric Design: The interface prioritizes readability (e.g., formatted cour
 These lessons will inform my approach to future projects, emphasizing proactive design choices over reactive fixes.
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------
-5. Evolution of Maintainable and Adaptable Code
+**5. Evolution of Maintainable and Adaptable Code**
+
 To ensure long-term usability, I implemented the following practices:
 
 Modularity: Separated concerns into distinct classes (Course for data, BST for operations).
@@ -75,12 +80,13 @@ Extensibility: Pointer-based storage (e.g., vector<Course>*) allows seamless exp
 
 Key Takeaway: Investing in clean architecture and forward-compatible design reduces technical debt and simplifies future maintenance.
 
--------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Conclusion
+**Conclusion**
+
 This project demonstrated the critical role of data structure selection in software efficiency and usability. By leveraging a BST, I delivered a system that meets advisor needs while remaining adaptable for future enhancements. The experience reinforced the importance of design rigor, testing, and documentation—skills I will carry forward into professional development.
 
-Areas for Improvement:
+**Areas for Improvement:**
 
 Implement balancing algorithms for larger datasets.
 
