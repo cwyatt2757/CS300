@@ -1,0 +1,25 @@
+Runtime Analysis for Reading and creating course objects
+
+
+ Data Structure 	 Operation                          	 Cost Per Op 	 # Operations 	 Total Cost      	 Big-O       
+ Vector         	 Create empty vector                	 1           	 1            	 1               	 O(1)        
+                	 Read file lines                    	 1           	 n            	 n               	 O(n)        
+                	 Create Course objects              	 1           	 n            	 n               	 O(n)        
+                	 Process prerequisites              	 1           	 p            	 p               	 O(p)        
+                	 Store in vector                    	 1           	 n            	 n               	 O(n)        
+                	 Total                     	             	              	 2n + p + 1 	 O(n + p)
+----------------	------------------------------------	-------------	--------------	-----------------	-------------
+ Hash Table     	 Create empty hash table            	 1           	 1            	 1               	 O(1)        
+                	 Read file lines                    	 1           	 n            	 n               	 O(n)        
+                	 Create Course objects              	 1           	 n            	 n               	 O(n)        
+                	 Process prerequisites              	 1           	 p            	 p               	 O(p)        
+                	 Hash insertion                     	 1           	 n            	 n               	 O(n)        
+                	 Total                     	             	              	 3n + p + 1 	 O(n + p)
+----------------	------------------------------------	-------------	--------------	-----------------	-------------
+ Binary Search  	 Create empty tree                  	 1           	 1            	 1               	 O(1)        
+ Tree           	 Read file lines                    	 1           	 n            	 n               	 O(n)        
+                	 Create Course objects              	 1           	 n            	 n               	 O(n)        
+                	 Process prerequisites              	 1           	 p            	 p               	 O(p)        
+                	 Tree insertion (balanced)          	 log n       	 n            	 n log n         	 O(n log n)  
+                	 Total                          	             	              	 n log n + 2n + p + 1 	 O(n log n + p)
+
